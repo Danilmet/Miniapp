@@ -1,0 +1,21 @@
+{
+  "name": "aida",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "generate-ssl": "mkdir -p .cert && mkcert -key-file ./.cert/key.pem -cert-file ./.cert/cert.pem 127.0.0.1 127.0.0.1",
+    "start-ssl": "sudo HTTPS=true PORT=443 SSL_CRT_FILE=./cert/cert.pem SSL_KEY_FILE=./cert/key.pem vite --host"
+  },
+  "dependencies": {
+    "@vkontakte/vk-bridge": "^2.14.1",
+    "vue": "^3.4.15"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.3",
+    "vite": "^5.0.11"
+  }
+}
